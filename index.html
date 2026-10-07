@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florería Azahar — Ramos de flores</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🌸 Florería Azahar</h1>
+  <nav>
+    <a href="#ramos">Ramos</a>
+    <a href="#carrito" class="cart-link">🛒 Carrito <span id="cart-count">0</span></a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>Ramos frescos para cada ocasión</h2>
+  <p>Pedidos online · Entregas en el día · Aceptamos todos los medios de pago</p>
+  <a class="btn" href="#ramos">Ver ramos</a>
+</div>
+
+<section id="ramos">
+  <h2>Nuestros ramos</h2>
+
+  <div class="categorias">
+    <button class="chip activo" onclick="filtrar('todos', this)">🌸 Todos</button>
+    <button class="chip" onclick="filtrar('rosas', this)">🌹 Rosas</button>
+    <button class="chip" onclick="filtrar('lilium', this)">💐 Lilium</button>
+    <button class="chip" onclick="filtrar('orquideas', this)">🌺 Orquídeas</button>
+    <button class="chip" onclick="filtrar('azahar', this)">🌼 Azahar</button>
+    <button class="chip" onclick="filtrar('margaritas', this)">🤍 Margaritas</button>
+    <button class="chip" onclick="filtrar('girasoles', this)">🌻 Girasoles</button>
+    <button class="chip" onclick="filtrar('variadas', this)">✨ Variadas</button>
+  </div>
+
+  <div class="grid">
+
+    <!-- ROSAS -->
+    <div class="card" data-cat="rosas">
+      <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=500" alt="Ramo de rosas">
+      <div class="card-body">
+        <span class="tag">Rosas</span>
+        <h3>Ramo de Rosas x12</h3>
+        <p>Doce rosas rojas frescas con follaje y moño.</p>
+        <div class="precio">$15.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo de Rosas x12',15000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <div class="card" data-cat="rosas">
+      <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=500" alt="Rosas rosadas">
+      <div class="card-body">
+        <span class="tag">Rosas</span>
+        <h3>Rosas Rosadas x6</h3>
+        <p>Media docena de rosas rosadas, ideal para regalo.</p>
+        <div class="precio">$9.500</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramos de Rosas Rosadas x6',9500)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- LILIUM -->
+    <div class="card" data-cat="lilium">
+      <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500" alt="Ramo de lilium">
+      <div class="card-body">
+        <span class="tag">Lilium</span>
+        <h3>Lilium Blanco x5</h3>
+        <p>Cinco liliums blancos perfumados con verdes.</p>
+        <div class="precio">$14.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo de Lilium Blanco x5',14000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <div class="card" data-cat="lilium">
+      <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=500" alt="Lilium rosa">
+      <div class="card-body">
+        <span class="tag">Lilium</span>
+        <h3>Lilium Rosa x5</h3>
+        <p>Liliums rosados en presentación elegante.</p>
+        <div class="precio">$14.500</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo de Lilium Rosa x5',14500)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- ORQUÍDEAS -->
+    <div class="card" data-cat="orquideas">
+      <img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94?w=500" alt="Orquídea phalaenopsis">
+      <div class="card-body">
+        <span class="tag">Orquídeas</span>
+        <h3>Orquídea Phalaenopsis</h3>
+        <p>Orquídea en maceta decorativa, duración prolongada.</p>
+        <div class="precio">$25.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Orquídea Phalaenopsis en Maceta',25000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <div class="card" data-cat="orquideas">
+      <img src="https://images.unsplash.com/photo-1614594895309-3452ef0d2a13?w=500" alt="Ramo de orquídeas">
+      <div class="card-body">
+        <span class="tag">Orquídeas</span>
+        <h3>Ramo de Orquídeas x3</h3>
+        <p>Varas de orquídea cortada, arreglo exclusivo.</p>
+        <div class="precio">$30.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo de Orquídeas x3',30000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- AZAHAR -->
+    <div class="card" data-cat="azahar">
+      <img src="https://images.unsplash.com/photo-1457089328109-e5d9bd499191?w=500" alt="Azahar">
+      <div class="card-body">
+        <span class="tag">Azahar</span>
+        <h3>Ramo de Azahar</h3>
+        <p>Flores de azahar silvestre, aroma intenso y delicado.</p>
+        <div class="precio">$11.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo de Azahar',11000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- MARGARITAS -->
+    <div class="card" data-cat="margaritas">
+      <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=500" alt="Ramo de margaritas">
+      <div class="card-body">
+        <span class="tag">Margaritas</span>
+        <h3>Margaritas</h3>
+        <p>Ramo campestre de margaritas y follaje.</p>
+        <div class="precio">$9.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo de Margaritas',9000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <div class="card" data-cat="margaritas">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500" alt="Margaritas de colores">
+      <div class="card-body">
+        <span class="tag">Margaritas</span>
+        <h3>Margaritas de Colores</h3>
+        <p>Combinado de margaritas variadas en tonos vivos.</p>
+        <div class="precio">$10.500</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo de Margaritas de Colores',10500)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- GIRASOLES -->
+    <div class="card" data-cat="girasoles">
+      <img src="https://images.unsplash.com/photo-1533616688419-b7a585564566?w=500" alt="Ramo de girasoles">
+      <div class="card-body">
+        <span class="tag">Girasoles</span>
+        <h3>Girasoles x5</h3>
+        <p>Cinco girasoles con verdes de estación.</p>
+        <div class="precio">$12.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo de Girasoles x5',12000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <div class="card" data-cat="girasoles">
+      <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500" alt="Girasol con rosas">
+      <div class="card-body">
+        <span class="tag">Girasoles</span>
+        <h3>Girasol & Rosas</h3>
+        <p>Girasoles combinados con rosas amarillas.</p>
+        <div class="precio">$16.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo Girasol & Rosas',16000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- VARIADAS -->
+    <div class="card" data-cat="variadas">
+      <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=500" alt="Ramo variado">
+      <div class="card-body">
+        <span class="tag">Variadas</span>
+        <h3>Ramo Surtido Clásico</h3>
+        <p>Mezcla de flores de estación armada por la florista.</p>
+        <div class="precio">$13.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo Surtido Clásico',13000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <div class="card" data-cat="variadas">
+      <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=500" alt="Ramo premium variado">
+      <div class="card-body">
+        <span class="tag">Variadas</span>
+        <h3>Ramo Premium Variado</h3>
+        <p>Selección premium con las flores más frescas del día.</p>
+        <div class="precio">$18.000</div>
+        <div class="qty">
+          <button onclick="cambiarQty(this,-1)">−</button><span class="q">1</span><button onclick="cambiarQty(this,1)">+</button>
+        </div>
+        <button class="add-btn" onclick="agregar(this,'Ramo Premium Variado',18000)">Agregar al carrito</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="carrito">
+  <h2>🛒 Tu carrito</h2>
+  <div class="carrito-panel">
+
+    <div id="cart-items"></div>
+
+    <div id="pago-section" style="display:none;">
+      <h3 style="color:var(--verde-osc);margin:20px 0 10px;">Medio de pago</h3>
+      <div class="pago" id="pago-options">
+        <label><input type="radio" name="pago" value="Efectivo" data-recargo="0" checked>
+          💵 Efectivo <small>(al retirar o contra entrega)</small></label>
+        <label><input type="radio" name="pago" value="Transferencia" data-recargo="0">
+          🏦 Transferencia bancaria <small>(sin recargo)</small></label>
+        <label><input type="radio" name="pago" value="Tarjeta" data-recargo="10">
+          💳 Tarjeta de crédito <small>(+10%)</small></label>
+        <label><input type="radio" name="pago" value="Mercado Pago" data-recargo="5">
+          📱 Mercado Pago <small>(+5%)</small></label>
+      </div>
+
+      <div class="factura-box">
+        <label><input type="checkbox" id="factura-check">
+          🧾 Necesito factura fiscal (A / B)</label>
+      </div>
+
+      <div class="totales">
+        <div><span>Subtotal</span><span id="subtotal">$0</span></div>
+        <div><span>Recargo por pago</span><span id="recargo">$0</span></div>
+        <div class="total-final"><span>TOTAL A PAGAR</span><span id="total">$0</span></div>
+      </div>
+
+      <button class="whatsapp-btn" onclick="enviarPedido()">✅ Enviar pedido por WhatsApp</button>
+    </div>
+
+    <!-- TICKET FISCAL -->
+    <div id="ticket">
+      <h3>🧾 TICKET FISCAL</h3>
+      <div style="text-align:center;">
+        FLORERÍA AZAHAR<br>
+        CUIT: 20-12345678-9<br>
+        IVA RESPONSABLE INSCRIPTO<br>
+        <span id="ticket-fecha"></span>
+      </div>
+      <div class="line"></div>
+      <table id="ticket-items"></table>
+      <div class="line"></div>
+      <table>
+        <tr><td>SUBTOTAL</td><td style="text-align:right" id="ticket-subtotal"></td></tr>
+        <tr><td>RECARGO</td><td style="text-align:right" id="ticket-recargo"></td></tr>
+        <tr><td><strong>TOTAL</strong></td><td style="text-align:right"><strong id="ticket-total"></strong></td></tr>
+      </table>
+      <div class="line"></div>
+      <div style="text-align:center;">
+        IVA CONTENIDO: <span id="ticket-iva"></span><br>
+        CAE: <span id="ticket-cae"></span><br>
+        Comprobante generado en formato digital
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>📍 Calle Falsa 123, Buenos Aires</p>
+  <p>📱 WhatsApp: 11 0000 0000</p>
+  <p>🕐 Lun a Sáb: 9 a 19 hs</p>
+  <p>📸 Instagram: @floreriaazahar</p>
+</section>
+
+<footer>
+  © 2026 Florería Azahar — Todos los derechos reservados
+</footer>
+
+<div id="toast">✓ Agregado al carrito</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
