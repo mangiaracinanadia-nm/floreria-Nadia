@@ -2,7 +2,7 @@
    FLORERÍA AZAHAR — Lógica del carrito
    ================================================ */
 
-const WHATSAPP = '5491100000000'; // <-- TU NÚMERO DE WHATSAPP
+const WHATSAPP = '5493416761036'; // <-- TU NÚMERO DE WHATSAPP
 let carrito = [];
 
 function filtrar(cat, chip){
